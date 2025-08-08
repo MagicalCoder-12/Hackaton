@@ -3,7 +3,7 @@ uvicorn
 python-dotenv
 pydantic
 Flask==2.3.3
-PyMuPDF==1.23.8
+PyMuPDF==1.22.5
 python-docx==0.8.11
 requests==2.31.0
 sentence-transformers==2.2.2
