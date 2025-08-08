@@ -45,7 +45,6 @@ Thumbs.db
 uploads/
 *.pdf
 *.docx
-*.txt
 
 # Logs
 *.log
