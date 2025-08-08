@@ -205,15 +205,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For support and questions:
 - Create an issue in the GitHub repository
-- Email: your-email@example.com
-- Documentation: [Wiki](https://github.com/yourusername/intelligent-document-query/wiki)
+- Email: kuppamajith@gmail.com,mohammedsameer2818@gmail.com
+- Documentation: https://github.com/mohammedsameer12345/hackathan
 
 ## 🔄 Version History
 
-- **v1.0.0** - Initial release with basic document processing and query capabilities
-- **v1.1.0** - Added confidence scoring and clause extraction
-- **v1.2.0** - Enhanced UI and improved error handling
-
----
-
-**Note**: This system is designed for educational and demonstration purposes. For production use, ensure proper security measures, data privacy compliance, and robust error handling. 
+--
