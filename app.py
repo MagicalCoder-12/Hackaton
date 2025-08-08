@@ -455,7 +455,7 @@ def analyze_document():
         'detailed_analysis': detailed_analysis
     })
 
-@app.route('/hackrx/run', methods=['POST'])
+@app.route('/api/vl/hackrx/run', methods=['POST'])
 @retry_with_backoff
 def hackrx_run():
     auth_header = request.headers.get('Authorization', '')
@@ -517,9 +517,7 @@ def hackrx_run():
     except Exception as e:
         return jsonify({"error": f"Something went wrong: {str(e)}"}), 500
     
-    
-# Add Flask route for /api/vl/hackrx/run POST endpoint
-app.route("/api/vl/hackrx/run", methods=["POST"])(hackrx_run)
+
 
 @app.route('/download/<filename>')
 def download_file():
@@ -537,8 +535,6 @@ def health_check():
         'version': '1.0.0'
     })
 
-
-# Register additional route for hackrx_run at /api/vl/hackrx/run
 app.route("/api/vl/hackrx/run", methods=["POST"])(hackrx_run)
 
 if __name__ == '__main__':
