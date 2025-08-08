@@ -1,3 +1,4 @@
+python-3.10.13
 Flask==2.3.3
 PyMuPDF==1.22.3  # 👈 this version works well on Render
 python-docx==0.8.11
