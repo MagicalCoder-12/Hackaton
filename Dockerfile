@@ -1,31 +1,18 @@
-FROM python:3.9-slim
+# Base image with Python 3.10
+FROM python:3.10-slim
 
-# Set working directory
+# Set work directory
 WORKDIR /app
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    gcc \
-    && rm -rf /var/lib/apt/lists/*
-
-# Copy requirements first for better caching
-COPY requirements.txt .
-
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy application code
+# Copy app files
 COPY . .
 
-# Create uploads directory
-RUN mkdir -p uploads
+# Install dependencies
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt
 
-# Expose port
+# Expose the port Flask will run on
 EXPOSE 5000
 
-# Set environment variables
-ENV FLASK_APP=app.py
-ENV FLASK_ENV=production
-
-# Run the application
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "2", "app:app"] 
+# Run the app
+CMD ["python", "app.py"]
