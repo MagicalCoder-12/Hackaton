@@ -9,6 +9,6 @@ echo The web interface will be available at: http://localhost:5000
 echo Press Ctrl+C to stop the application
 echo.
 
-C:\Users\salma\AppData\Local\Programs\Python\Python312\python.exe app.py
+python app.py
 
 pause 
